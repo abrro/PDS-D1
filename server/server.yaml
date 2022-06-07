@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: user-api
+  labels:
+    name : user-api
+spec:
+  containers:
+  - name: user-api
+    image: 2611996/server:1.1
+    ports:
+    - containerPort: 8081

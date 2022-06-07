@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: post-request
+spec:
+  template:
+    spec:
+      containers:
+      - name: post-request
+        image: 2611996/client:1.1
+        command: ["python", "postRequest.py"]
+      restartPolicy: OnFailure
